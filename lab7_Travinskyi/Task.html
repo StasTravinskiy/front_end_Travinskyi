@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>lab7</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 15%;
+            background-color: #c5e1a5;
+        }
+
+        .middle-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            height: 70%;
+            background-color: #fff176;
+        }
+
+        .block {
+            display: inline-block;
+            width: 30%;
+            height: 90%;
+            margin: 10px;
+            background-color: #4fc3f7;
+            padding: 10px;
+            overflow: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .rotated {
+            transform: rotate(-5deg);
+        }
+
+        .footer {
+            height: 15%;
+            background-color: #ce93d8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="block">&#169; Травінський Станіслав</div>
+            <div class="block">&#9829; Лабораторна 7</div>
+            <div class="block">&#9733; Властивість display</div>
+        </div>
+
+        <div class="middle-row">
+            <div class="block">Цей блок містить короткий текст.</div>
+            <div class="block rotated">Цей блок повернутий за допомогою CSS.</div>
+            <div class="block">
+                <p>Цей блок містить великий об'єм тексту, який буде прокручуватись, якщо перевищить висоту блоку. 
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>Низ сторінки</span>
+        </div>
+    </div>
+</body>
+</html>

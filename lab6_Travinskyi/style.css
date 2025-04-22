@@ -1,0 +1,50 @@
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: #4CAF50;
+    color: white;
+    line-height: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out 0s;
+    border-radius: 8px;
+}
+
+.box:hover {
+    background-color: #45a049;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.gradient {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.transform2d {
+    width: 200px;
+    height: 100px;
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 20px;
+    transform: matrix(1, 0.2, 0.3, 1, 20, 10) rotate(25deg);
+    transform-origin: top left;
+}
+
+.transform3d {
+    width: 200px;
+    height: 100px;
+    background-color: #673AB7;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    transform: perspective(500px) rotateY(45deg);
+    transform-style: preserve-3d;
+}

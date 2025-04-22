@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lab 8</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      gap: 10px;
+      padding: 10px;
+    }
+    header {
+      grid-area: header;
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    aside {
+      grid-area: sidebar;
+      background-color: #dfe6e9;
+      padding: 15px;
+    }
+    main {
+      grid-area: main;
+      background-color: #ffffff;
+      padding: 15px;
+      overflow-y: auto;
+    }
+    footer {
+      grid-area: footer;
+      background-color: #636e72;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+      }
+    }
+    @media print {
+      body {
+        background-color: white;
+      }
+      .container {
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+      }
+      aside {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ласкаво просимо на мою сторінку</h1>
+    </header>
+    <aside>
+      <h3>Навігація</h3>
+      <ul>
+        <li><a href="#">Головна</a></li>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </aside>
+    <main>
+      <h2>Основний контент</h2>
+      <p>
+        Це основна частина сторінки з великим обсягом тексту. 
+      </p>
+    </main>
+    <footer>
+      <p>© 2025 Інформаційна сторінка. Всі права захищено.</p>
+    </footer>
+  </div>
+</body>
+</html>

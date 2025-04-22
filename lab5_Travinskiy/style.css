@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  margin: 0;
+}
+
+header, nav, section, article, aside, footer {
+  margin: 15px;
+  padding: 15px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  outline: 2px dashed #555;
+}
+
+header {
+  background: radial-gradient(circle, #fff, #ddd);
+  text-align: center;
+  text-shadow: 1px 1px 3px #aaa;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-bottom: 2px solid #333;
+  cursor: pointer;
+}
+
+img {
+  width: 300px;
+  border: 8px solid;
+  border-image-source: url(images/clothes.jpg);
+  border-image-slice: 30;
+  border-image-width: 8px;
+  border-image-repeat: round;
+  border-image-outset: 4px;
+}
+
+article {
+  resize: both;
+  overflow: auto;
+  cursor: grab;
+}
+
+input, textarea {
+  caret-color: crimson;
+}
+
+blockquote {
+  quotes: "«" "»";
+}
+
+blockquote:before {
+  content: open-quote;
+}
+
+blockquote:after {
+  content: close-quote;
+}
+
+aside {
+  background-color: #f7f7f7;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+}

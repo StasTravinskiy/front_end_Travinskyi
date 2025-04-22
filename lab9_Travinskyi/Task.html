@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Сторінка</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('CustomFont.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'Caveat', 'CustomFont', sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #2d3436;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    aside {
+      flex: 1;
+      background-color: #dfe6e9;
+      padding: 15px;
+    }
+
+    main {
+      flex: 2;
+      background-color: #ffffff;
+      padding: 15px;
+      overflow-y: auto;
+      max-height: 60vh;
+    }
+
+    .note::after {
+      content: attr(data-note);
+      color: #0984e3;
+    }
+
+    .dynamic-width {
+      width: calc(100% - 50px);
+      background-color: #ffeaa7;
+      padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      aside {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Ласкаво просимо на Flexbox сторінку</h1>
+    </header>
+    <div class="content">
+      <aside>
+        <h3>Меню</h3>
+        <ul>
+          <li><a href="#">Головна</a></li>
+          <li><a href="#">Про проєкт</a></li>
+        </ul>
+      </aside>
+      <main>
+        <h2>Основна інформація</h2>
+        <p class="note" data-note=" - Примітка для користувача.">Це динамічний блок</p>
+        <div class="dynamic-width">
+          <p>Ширина цього елементу задається через функцію calc().</p>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+        </p>
+      </main>
+    </div>
+    <footer>
+      <p>© 2025 Flexbox Сторінка</p>
+    </footer>
+  </div>
+</body>
+</html>
